@@ -18,7 +18,8 @@ It doesn't matter what values are set beyond the returned length.
 
 */
 
-int removeElement(vector<int>& nums, int val) {
+int removeElement(vector<int>& nums, int val)
+ {
         int CountNum=0,i=0,j=0;
         while(i<nums.size()&&j<nums.size())
         {
