@@ -22,16 +22,15 @@ public:
 	//priority_queue<int, vector<int>, greater<int>> heap;
 	//priority_queue<int, vector<int>, less<int>> heap;
     int size;
-    KthLargest(int k, vector<int> nums) {
-
+    KthLargest(int k, vector<int> nums) 
+	{
         size = k;
-        
         for (int it:nums)
 		{            
             heap.push(it);      
             if (heap.size() > k) 
-				heap.pop();        
-        }    
+			heap.pop();        
+		}    
     }    
     int add(int val) 
 	{        
