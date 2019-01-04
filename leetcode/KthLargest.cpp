@@ -18,28 +18,25 @@ kthLargest.add(4);   // returns 8
 
 class KthLargest {
 public:
-    priority_queue<int, vector<int>, greater<int>> heap;    
+    priority_queue<int, vector<int>, greater<int>> heap;  
 	//priority_queue<int, vector<int>, greater<int>> heap;
-	//priority_queue<int, vector<int>, less<int>> heap;
+	//priority_queue<int, vector<int>, less<int>> heap;	
     int size;
     KthLargest(int k, vector<int> nums) 
-	{
+    {
         size = k;
         for (int it:nums)
 		{            
-            heap.push(it);      
-            if (heap.size() > k) 
-			heap.pop();        
-		}    
+            heap.push(it);
+            if (heap.size() > k)
+                heap.pop();        
+        }    
     }    
     int add(int val) 
-	{        
+    {        
         heap.push(val);        
         if (heap.size() > size) 
-			heap.pop();        
+            heap.pop();        
         return heap.top();    
-	}
-
- 
-
+    }
 };
