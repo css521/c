@@ -30,3 +30,14 @@ public:
         return (temp==result);
     }
 };
+
+class Solution {
+public:
+    bool isPalindrome(int x) { 
+        string str=to_string(x);
+        string str1;
+        str1.resize(str.size());
+        reverse_copy(str.begin(),str.end(),str1.begin());
+        return (str==str1);
+    }
+};
