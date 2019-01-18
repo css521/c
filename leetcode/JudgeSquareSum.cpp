@@ -16,7 +16,7 @@ public:
     bool judgeSquareSum(int c) 
     {
         for(int i=0;i<=sqrt(c);++i)
-            if((int)sqrt(c-i*i)==sqrt(c-i*i))
+            if((int)sqrt(c-i*i)==sqrt(c-i*i)) //Just judge whether it's right or wrong.
                     return true;
         return false;
     }
